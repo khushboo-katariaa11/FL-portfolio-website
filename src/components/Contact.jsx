@@ -35,15 +35,21 @@ const Contact = () => {
 
         <div className="flex flex-col items-center text-center">
           <p className="mb-10 font-general text-[10px] uppercase">
-            Join Zentry
+            Start the mission
           </p>
 
           <AnimatedTitle
-            title="let&#39;s b<b>u</b>ild the <br /> new era of <br /> g<b>a</b>ming t<b>o</b>gether."
-            className="special-font !md:text-[6.2rem] w-full font-zentry !text-5xl !font-black !leading-[.9]"
+            title="Let&#39;s build your <br /> next level website"
+            containerClass="w-full !text-5xl sm:!text-6xl md:!text-7xl lg:!text-[6rem] xl:!text-[6.75rem] !leading-[.9]"
           />
 
-          <Button title="contact us" containerClass="mt-10 cursor-pointer" />
+          <p className="mt-6 max-w-xl font-circular-web text-sm text-blue-50/80 sm:text-base">
+            If you want a site that looks sharp, feels premium, and helps your
+            business convert more visitors into leads, I’m ready for the next
+            quest.
+          </p>
+
+          <Button title="book a call" containerClass="mt-10 cursor-pointer" />
         </div>
       </div>
     </div>

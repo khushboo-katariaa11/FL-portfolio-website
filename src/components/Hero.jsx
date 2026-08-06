@@ -1,7 +1,6 @@
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/all";
-import { TiLocationArrow } from "react-icons/ti";
 import { useEffect, useRef, useState } from "react";
 
 import Button from "./Button";
@@ -33,6 +32,10 @@ const Hero = () => {
     setHasClicked(true);
 
     setCurrentIndex((prevIndex) => (prevIndex % totalVideos) + 1);
+  };
+
+  const handleViewWork = () => {
+    document.querySelector("#products")?.scrollIntoView({ behavior: "smooth" });
   };
 
   useGSAP(
@@ -83,7 +86,7 @@ const Hero = () => {
   const getVideoSrc = (index) => `videos/hero-${index}.mp4`;
 
   return (
-    <div className="relative h-dvh w-screen overflow-x-hidden">
+    <div id="home" className="relative h-dvh w-screen overflow-x-hidden">
       {loading && (
         <div className="flex-center absolute z-[100] h-dvh w-screen overflow-hidden bg-violet-50">
           {/* https://uiverse.io/G4b413l/tidy-walrus-92 */}
@@ -141,31 +144,40 @@ const Hero = () => {
         </div>
 
         <h1 className="special-font hero-heading absolute bottom-5 right-5 z-40 text-blue-75">
-          G<b>A</b>MING
+          Q<b>U</b>EST
         </h1>
 
         <div className="absolute left-0 top-0 z-40 size-full">
-          <div className="mt-24 px-5 sm:px-10">
-            <h1 className="special-font hero-heading text-blue-100">
-              redefi<b>n</b>e
+          <div className="mt-20 max-w-2xl px-5 sm:mt-24 sm:px-10 lg:mt-28 lg:max-w-3xl">
+            <p className="mb-4 font-general text-sm uppercase tracking-[0.35em] text-blue-100/80">
+              New quest unlocked
+            </p>
+
+            <h1 className="special-font hero-heading max-w-[11ch] text-blue-100 lg:max-w-[12ch]">
+              Level up your business <br /> with a website that converts
             </h1>
 
-            <p className="mb-5 max-w-64 font-robert-regular text-blue-100">
-              Enter the Metagame Layer <br /> Unleash the Play Economy
+            <p className="mb-3 max-w-md font-robert-regular text-blue-100/90 sm:text-lg lg:max-w-lg">
+              I design and build cinematic websites for small businesses that
+              want more trust, more leads, and a stronger online presence.
+            </p>
+
+            <p className="mb-6 font-general text-xs uppercase tracking-[0.28em] text-blue-100/75">
+              Freelance web designer for small businesses
             </p>
 
             <Button
-              id="watch-trailer"
-              title="Watch trailer"
-              leftIcon={<TiLocationArrow />}
-              containerClass="bg-yellow-300 flex-center gap-1"
+              id="view-work"
+              title="View work"
+              containerClass="bg-yellow-300"
+              onClick={handleViewWork}
             />
           </div>
         </div>
       </div>
 
       <h1 className="special-font hero-heading absolute bottom-5 right-5 text-black">
-        G<b>A</b>MING
+        Q<b>U</b>EST
       </h1>
     </div>
   );

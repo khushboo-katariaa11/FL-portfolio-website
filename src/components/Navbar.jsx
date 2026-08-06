@@ -6,7 +6,7 @@ import { TiLocationArrow } from "react-icons/ti";
 
 import Button from "./Button";
 
-const navItems = ["Home", "About", "Work", "Services", "Contact"];
+const navItems = ["Home", "About", "Work", "Reviews", "Contact"];
 
 const NavBar = () => {
   // State for toggling audio and visual indicator
@@ -25,6 +25,10 @@ const NavBar = () => {
   const toggleAudioIndicator = () => {
     setIsAudioPlaying((prev) => !prev);
     setIsIndicatorActive((prev) => !prev);
+  };
+
+  const handleProductsClick = () => {
+    document.querySelector("#products")?.scrollIntoView({ behavior: "smooth" });
   };
 
   // Manage audio playback
@@ -78,6 +82,7 @@ const NavBar = () => {
               title="Products"
               rightIcon={<TiLocationArrow />}
               containerClass="bg-blue-50 md:flex hidden items-center justify-center gap-1"
+              onClick={handleProductsClick}
             />
           </div>
 
