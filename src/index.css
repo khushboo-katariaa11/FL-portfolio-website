@@ -69,7 +69,14 @@ body {
   }
 
   .hero-heading {
-    @apply uppercase font-zentry font-black text-5xl sm:right-10 sm:text-7xl md:text-9xl lg:text-[12rem];
+    @apply uppercase font-zentry font-black leading-[0.9] sm:right-10;
+    font-size: clamp(2.9rem, 5vw, 5.75rem);
+  }
+
+  @media (min-width: 1280px) {
+    .hero-heading {
+      font-size: clamp(5.25rem, 4.35vw, 7.5rem);
+    }
   }
 
   .about-subtext {
