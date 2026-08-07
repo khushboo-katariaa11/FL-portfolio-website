@@ -5,35 +5,35 @@ import { TiLocationArrow } from "react-icons/ti";
 const categoryCards = [
   {
     title: "Nails",
-    image: "/img/gallery-1.webp",
+    image: "/img/gallery-1.jpeg",
     description:
       "Booking-first layouts, service menus, and a polished visual style for beauty studios.",
     tag: "Book appointments",
   },
   {
     title: "Jewellery",
-    image: "/img/gallery-2.webp",
+    image: "/img/gallery-2.jpeg",
     description:
       "Luxury storytelling, product highlights, and premium storefront energy for jewellery brands.",
     tag: "Showcase collections",
   },
   {
     title: "Cafe",
-    image: "/img/gallery-3.webp",
+    image: "/img/gallery-3.jpeg",
     description:
       "Warm, inviting pages with menu sections, ambience shots, and a clear table-booking flow.",
     tag: "Reserve a table",
   },
   {
-    title: "Salon",
-    image: "/img/gallery-4.webp",
+    title: "Stationery",
+    image: "/img/gallery-4.jpeg",
     description:
-      "Clean, elegant templates designed to lift trust, appointments, and local visibility.",
-    tag: "Grow bookings",
+      "Your one-stop shop for creativity, school supplies, office essentials, cute notebooks.",
+    tag: "Ink & Excellence",
   },
   {
     title: "Boutique",
-    image: "/img/gallery-5.webp",
+    image: "/img/gallery-5.jpeg",
     description:
       "Fashion-forward layouts with editorial spacing and a premium feel that sells the brand.",
     tag: "Drive style sales",
