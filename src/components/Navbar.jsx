@@ -89,15 +89,15 @@ const NavBar = () => {
           {/* Navigation Links and Audio Button */}
           <div className="flex h-full items-center">
             <div className="hidden md:block">
-              {navItems.map((item, index) => (
-                <a
-                  key={index}
-                  href={`#${item.toLowerCase()}`}
-                  className="nav-hover-btn"
-                >
-                  {item}
-                </a>
-              ))}
+              {navItems.map((item, index) => {
+                const href = item.toLowerCase() === "work" ? "#products" : `#${item.toLowerCase()}`;
+
+                return (
+                  <a key={index} href={href} className="nav-hover-btn">
+                    {item}
+                  </a>
+                );
+              })}
             </div>
 
             <button

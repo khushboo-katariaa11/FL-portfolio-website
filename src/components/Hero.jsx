@@ -166,12 +166,22 @@ const Hero = () => {
               Freelance web designer for small businesses
             </p>
 
-            <Button
-              id="view-work"
-              title="View work"
-              containerClass="bg-yellow-300"
-              onClick={handleViewWork}
-            />
+            <div className="flex flex-wrap gap-3">
+              <Button
+                id="view-work"
+                title="View work"
+                containerClass="bg-yellow-300"
+                onClick={handleViewWork}
+              />
+
+              <Button
+                title="Book now"
+                href="https://www.instagram.com/kiyunora/"
+                target="_blank"
+                rel="noopener noreferrer"
+                containerClass="bg-violet-50"
+              />
+            </div>
           </div>
         </div>
       </div>

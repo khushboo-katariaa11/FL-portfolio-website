@@ -3,7 +3,7 @@ import { FaGithub, FaLinkedin, FaInstagram, FaDribbble } from "react-icons/fa";
 const socialLinks = [
   { href: "https://github.com", icon: <FaGithub /> },
   { href: "https://linkedin.com", icon: <FaLinkedin /> },
-  { href: "https://instagram.com", icon: <FaInstagram /> },
+  { href: "https://www.instagram.com/kiyunora/", icon: <FaInstagram /> },
   { href: "https://dribbble.com", icon: <FaDribbble /> },
 ];
 

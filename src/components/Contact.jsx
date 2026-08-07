@@ -49,7 +49,13 @@ const Contact = () => {
             quest.
           </p>
 
-          <Button title="book a call" containerClass="mt-10 cursor-pointer" />
+          <Button
+            title="book a call"
+            href="https://www.instagram.com/kiyunora/"
+            target="_blank"
+            rel="noopener noreferrer"
+            containerClass="mt-10 cursor-pointer"
+          />
         </div>
       </div>
     </div>

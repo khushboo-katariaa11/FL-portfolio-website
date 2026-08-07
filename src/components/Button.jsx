@@ -8,17 +8,17 @@ const Button = ({
   containerClass,
   onClick,
   type = "button",
+  href,
+  target,
+  rel,
 }) => {
-  return (
-    <button
-      id={id}
-      type={type}
-      onClick={onClick}
-      className={clsx(
-        "group relative z-10 w-fit cursor-pointer overflow-hidden rounded-full bg-violet-50 px-7 py-3 text-black",
-        containerClass
-      )}
-    >
+  const sharedClassName = clsx(
+    "group relative z-10 w-fit cursor-pointer overflow-hidden rounded-full bg-violet-50 px-7 py-3 text-black",
+    containerClass
+  );
+
+  const content = (
+    <>
       {leftIcon}
 
       <span className="relative inline-flex overflow-hidden font-general text-xs uppercase">
@@ -31,6 +31,20 @@ const Button = ({
       </span>
 
       {rightIcon}
+    </>
+  );
+
+  if (href) {
+    return (
+      <a id={id} href={href} target={target} rel={rel} className={sharedClassName}>
+        {content}
+      </a>
+    );
+  }
+
+  return (
+    <button id={id} type={type} onClick={onClick} className={sharedClassName}>
+      {content}
     </button>
   );
 };

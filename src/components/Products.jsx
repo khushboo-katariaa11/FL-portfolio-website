@@ -50,10 +50,10 @@ const ProductCard = ({ title, image, description, tag, featured = false }) => {
       <img
         src={image}
         alt={title}
-        className="absolute left-0 top-0 size-full object-cover object-center opacity-70 transition-transform duration-700 group-hover:scale-105"
+        className="absolute inset-0 w-full h-full object-cover object-center opacity-70 transition-transform duration-700 group-hover:scale-105"
       />
       <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
-      <div className="relative z-10 flex size-full flex-col justify-end p-5 md:p-7">
+      <div className="relative z-10 flex h-full flex-col justify-end p-5 md:p-7">
         <p className="mb-3 font-general text-[10px] uppercase tracking-[0.35em] text-blue-50/70">
           {tag}
         </p>
@@ -117,6 +117,9 @@ const Products = () => {
             <Button
               title="Start a custom build"
               leftIcon={<TiLocationArrow />}
+              href="https://www.instagram.com/kiyunora/"
+              target="_blank"
+              rel="noopener noreferrer"
               containerClass="mt-6 bg-yellow-300 flex-center gap-1"
             />
           </div>
